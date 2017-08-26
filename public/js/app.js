@@ -78,7 +78,7 @@ $(document).on("click", ".notebtn", function() {
     var thisId = $(this).attr("value");
     var savenote = $("#bodyinput").val();
 
-    // Run a POST request to change the note, using what's entered in the inputs
+    // Run a POST request to change the note
     $.ajax({
             method: "POST",
             url: "/articles/" + thisId,
@@ -91,6 +91,6 @@ $(document).on("click", ".notebtn", function() {
             
         });
 
-    // Also, remove the values entered in the input and textarea for note entry
+    
     $("#bodyinput").val("");
 });
